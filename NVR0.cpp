@@ -250,10 +250,10 @@ void NVR0::ReadPhysicalMemory(ULONG_PTR target_va, LPVOID results, DWORD size) {
 	ULONG_PTR PA = GetPhysicalAddress(target_va);
 
 	CmdBuff buff = {
-		.CMD = ReadPhysicalMem,							  // MmMapIO_read? Less than 0x80
-		.Size = 0x0008,									      // Used for MmMapIO
+		.CMD = ReadPhysicalMem,							// MmMapIO_read? Less than 0x80
+		.Size = 0x0008,								// Used for MmMapIO
 		.SourceAddress = (ULONG_PTR)results,  // DstAddr
-		.TargetVA = PA,									      // MmGetPhysical Target : MmapIoRead Target
+		.TargetVA = PA,								// MmGetPhysical Target : MmapIoRead Target
 		.Unknown2 = 0x4343434343434343,
 		.Unknown3 = 0x4444444444444444,
 		.Unknown4 = 0x4545454545454545,
@@ -276,10 +276,10 @@ void NVR0::WritePhysicalMemory(ULONG_PTR target_va, LPVOID results, DWORD size) 
 	ULONG_PTR PA = GetPhysicalAddress(target_va);
 
 	CmdBuff buff = {
-		.CMD = WritePhysicalMem,								// MmapIo Write
-		.Size = 0x0008,								          // Size to Read
-		.SourceAddress = PA,						        // DstAddr
-		.TargetVA = (ULONG_PTR)results,				  // MmGetPhysical Target : MmapIoRead Target
+		.CMD = WritePhysicalMem,				// MmapIo Write
+		.Size = 0x0008,						// Size to Read
+		.SourceAddress = PA,					// DstAddr
+		.TargetVA = (ULONG_PTR)results,				// MmGetPhysical Target : MmapIoRead Target
 		.Unknown2 = 0x4343434343434343,
 		.Unknown3 = 0x4444444444444444,
 		.Unknown4 = 0x4545454545454545,
