@@ -1,5 +1,5 @@
 # NVR0
-Nvidia Driver poc. This was developed last year when I was doing research and learning more about BYOVD, but the certificate was recently revoked so it's not being "archived" here for research and training purposes.
+Nvidia Driver poc. This was developed last year when I was doing research and learning more about BYOVD, but the certificate was recently revoked so it's now being "archived" here for research and training purposes.
 
 ## Exploit Primitives
 - Abuses MmMapIoSpace and MmGetPhysicalAddress
